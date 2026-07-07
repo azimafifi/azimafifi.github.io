@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- ==========================================================================
+  CASE STUDY TEMPLATE. Do not link to this file from the site.
+  To create a new case study:
+    1. Copy this file to case-studies/<slug>.html
+    2. Fill every [[SLOT:...]] marker below. Delete none of the surrounding markup.
+    3. Register the study in assets/js/case-studies.js (schema documented there).
+  Full instructions: claude.md > "Instruction Workflow for Content Expansion".
+=========================================================================== -->
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[[SLOT:TITLE]] &middot; Azim Afifi</title>
+  <meta name="description" content="[[SLOT:META_DESCRIPTION]]">
+
+  <script src="../assets/js/theme-boot.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind-config.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body class="bg-paper font-sans text-ink">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- @component: article-header (do not modify) -->
+  <header class="sticky top-0 z-40 border-b border-line bg-paper/85 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="../index.html" class="nav-link text-sm font-medium"><span aria-hidden="true">&larr;</span> Azim Afifi</a>
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+        <svg class="icon-sun h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="mx-auto max-w-6xl px-6 pb-24">
+
+    <!-- @component: article-hero -->
+    <section class="mx-auto max-w-3xl pt-16 sm:pt-20">
+      <!-- badge class must be badge-live, badge-planned, or badge-concept -->
+      <span class="badge [[SLOT:BADGE_CLASS]]">[[SLOT:STATUS_LABEL]]</span>
+      <h1 class="mt-6 font-display text-4xl font-bold leading-[1.1] tracking-tight sm:text-6xl">[[SLOT:TITLE]]</h1>
+      <p class="mt-6 text-lg leading-relaxed text-muted">[[SLOT:STANDFIRST]]</p>
+      <dl class="mt-8 grid gap-4 border-y border-line py-5 text-sm sm:grid-cols-3">
+        <div>
+          <dt class="font-semibold uppercase tracking-[0.14em] text-[0.68rem] text-accent">[[SLOT:META1_LABEL]]</dt>
+          <dd class="mt-1 text-muted">[[SLOT:META1_VALUE]]</dd>
+        </div>
+        <div>
+          <dt class="font-semibold uppercase tracking-[0.14em] text-[0.68rem] text-accent">[[SLOT:META2_LABEL]]</dt>
+          <dd class="mt-1 text-muted">[[SLOT:META2_VALUE]]</dd>
+        </div>
+        <div>
+          <dt class="font-semibold uppercase tracking-[0.14em] text-[0.68rem] text-accent">[[SLOT:META3_LABEL]]</dt>
+          <dd class="mt-1 text-muted">[[SLOT:META3_VALUE]]</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- @component: article-body
+         Allowed building blocks inside <article> (all styled by site.css):
+           <p class="lede">      opening paragraph, use exactly once, first
+           <h2>                  section heading (teal rule renders automatically)
+           <p> <ul> <ol>         body content
+           <blockquote class="pullquote"> ... <cite>...</cite> </blockquote>
+           <div class="placeholder"> note about content still to be written </div>
+           <div class="figure-ph"> [ image description ] </div>
+           stat tiles: copy the grid + .stat-tile pattern from ai-in-education.html
+    -->
+    <article class="article pt-12">
+      <p class="lede">[[SLOT:LEDE]]</p>
+
+      <h2>[[SLOT:SECTION_HEADING]]</h2>
+      <p>[[SLOT:SECTION_BODY]]</p>
+
+      <!-- repeat h2 + content blocks as needed -->
+
+      <!-- @component: article-footer-nav -->
+      <nav class="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-8 text-sm font-semibold" aria-label="Case studies">
+        <a class="nav-link" href="[[SLOT:PREV_HREF]]"><span aria-hidden="true">&larr;</span> [[SLOT:PREV_TITLE]]</a>
+        <a class="text-accent" href="[[SLOT:NEXT_HREF]]">[[SLOT:NEXT_TITLE]] <span aria-hidden="true">&rarr;</span></a>
+      </nav>
+    </article>
+  </main>
+
+  <!-- @component: site-footer (do not modify) -->
+  <footer class="border-t border-line">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-muted sm:flex-row">
+      <p>&copy; 2026 Azim Afifi</p>
+      <p><a class="nav-link" href="mailto:hello@azimafifi.com">hello@azimafifi.com</a></p>
+    </div>
+  </footer>
+
+  <script type="module" src="../assets/js/article.js"></script>
+</body>
+</html>
