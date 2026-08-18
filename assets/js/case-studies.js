@@ -16,6 +16,17 @@
 
 export const CASE_STUDIES = [
   {
+    slug: 'course-production-line',
+    status: 'Published',
+    statusTone: 'live',
+    eyebrow: 'Working system',
+    title: 'The Course Production Line',
+    summary:
+      'A production line for my own lecture materials: seventeen lectures across four subjects in nine weeks, with the outline, the quality check and the teaching judgment kept in human hands.',
+    tags: ['AI systems', 'Course production', 'Learning design'],
+    href: './case-studies/course-production-line.html'
+  },
+  {
     slug: 'ai-in-education',
     status: 'Published',
     statusTone: 'live',
@@ -41,7 +52,7 @@ export const CASE_STUDIES = [
     slug: 'the-learning-floorplan',
     status: 'Concept',
     statusTone: 'concept',
-    eyebrow: 'Framework concept',
+    eyebrow: 'Concept',
     title: 'The Learning Floorplan',
     summary:
       'What happens when you plan a corporate training program the way an interior architect plans a floor: sightlines, circulation, thresholds, and dwell points, applied to an onboarding journey.',

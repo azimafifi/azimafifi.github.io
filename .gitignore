@@ -3,3 +3,9 @@
 *.docx
 *.doc
 Thumbs.db
+
+# Internal working documents. Never publish: GitHub Pages would serve these
+# at a public URL. Outlines, copy reviews, and the imported resume stay local.
+case-study-outline-*.md
+copy-review-*.md
+imported-*.md
